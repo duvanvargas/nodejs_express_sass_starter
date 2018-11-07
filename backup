@@ -1,0 +1,68 @@
+                .col.col-3.pd-1.flex.justify-content-center.material-card-etb
+                    .container.material-card-etb-content.pd-1
+                        .row
+                            .col
+                                .material-card-etb-header.mg-top-3
+                                    .material-card-etb-title.flex.justify-content-center
+                                        span 15 megas
+                                    .material-card-etb-price.flex.justify-content-center.mg-top-0_5
+                                        span $129.000
+                                    .material-card-etb-legend.flex.justify-content-end
+                                        span Tarifas estrato 3
+                        .row.mg-top-2
+                            .col.flex.justify-content-center
+                                span.double-speed
+                                    | 15X30&nbsp;
+                                span.duration
+                                    | X1 AÑO
+                        .row
+                            .col.flex.justify-content-center
+                                .double-velocity
+                                    span doble velocidad
+                        .row.mg-top-1
+                            .col.flex.justify-content-center
+                                .material-card-etb-box
+                                    span 121 canales
+                        .row
+                            .col.flex.justify-content-center
+                                .double-velocity
+                                    span 47 hd
+                        .row.mg-top-5.mg-b-1
+                            .col.flex.justify-content-center
+                                .double-velocity
+                                    span contr&aacute;talo aqu&iacute;
+                .col.col-3.pd-1.flex.justify-content-center.material-card-etb
+                    .container.material-card-etb-content.pd-1
+                        .row
+                            .col
+                                .material-card-etb-header.mg-top-3
+                                    .material-card-etb-title.flex.justify-content-center
+                                        span 30 megas
+                                    .material-card-etb-price.flex.justify-content-center.mg-top-0_5
+                                        span $144.000
+                                    .material-card-etb-legend.flex.justify-content-end
+                                        span Tarifas estrato 3
+                        .row.mg-top-2
+                            .col.flex.justify-content-center
+                                span.double-speed
+                                    | 30X60&nbsp;
+                                span.duration
+                                    | X1 AÑO
+                        .row
+                            .col.flex.justify-content-center
+                                .double-velocity
+                                    span doble velocidad
+                        .row.mg-top-1
+                            .col.flex.justify-content-center
+                                .material-card-etb-box
+                                    span 127 canales
+                        .row
+                            .col.flex.justify-content-center
+                                .double-velocity
+                                    span 70 hd
+                        .row.mg-top-5.mg-b-1
+                            .col.flex.justify-content-center
+                                .double-velocity
+                                    span contr&aacute;talo aqu&iacute;
+
+
