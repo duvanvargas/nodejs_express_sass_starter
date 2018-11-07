@@ -122,7 +122,7 @@ html(lang='es-ES')
                         | TELÉFONO*
                         br
                         span.wpcf7-form-control-wrap.Telefono
-                          input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validates-as-number(type='number', name='Telefono', value='', aria-required='true', aria-invalid='false')
+                          input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validates-as-number#Telefono(type='number', name='Telefono', value='', aria-required='true', aria-invalid='false', enctype="application/x-www-form-urlencoded")
                     p
                       label
                         | E-mail*
@@ -138,7 +138,7 @@ html(lang='es-ES')
                               span.wpcf7-list-item-label
                                 u(onclick="openModalx('.modal--usodatos');") Acepto uso de Datos
                     p
-                      input.wpcf7-form-control.wpcf7-submit.btn.btn--square.btn--orange(type='submit', value='ENVIAR')
+                      input.wpcf7-form-control.wpcf7-submit.btn.btn--square.btn--orange(type='submit', method='post', value='ENVIAR', enctype="application/x-www-form-urlencoded")
                     .wpcf7-response-output.wpcf7-display-none
         .container-fluid.mainFooter__end
           .row.align-items-center
