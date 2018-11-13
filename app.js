@@ -4,9 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var helmet = require('helmet');
+var uglifyMiddleware = require('express-uglify-middleware');
 var sassMiddleware = require('node-sass-middleware');
-var browserify = require('browserify-middleware');
-
+var reloadify = require('reloadify')(__dirname + '/views');
 var indexRouter = require('./routes/index');
 
 var app = express();
@@ -32,6 +32,18 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+//JS
+app.use(uglifyMiddleware({ 
+  src: path.join(__dirname, 'js'),
+  dest: path.join(__dirname, 'public/js'),
+  prefix: "/js",
+  compress: true,
+  force: false,
+  debug: false
+}));
+
+//SASS
 app.use(sassMiddleware({
   src: path.join(__dirname, 'sass'),
   dest: path.join(__dirname, 'public/css'),
@@ -41,7 +53,10 @@ app.use(sassMiddleware({
   force: true,
   prefix: '/css',
 }));
-app.use('js', browserify(path.join(__dirname, 'public/js')));
+//
+
+app.use(reloadify);
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
