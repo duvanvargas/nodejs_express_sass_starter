@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var helmet = require('helmet');
 var sassMiddleware = require('node-sass-middleware');
+var browserify = require('browserify-middleware');
 
 var indexRouter = require('./routes/index');
 
@@ -24,7 +25,8 @@ app.disable('x-powered-by')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 app.use(helmet());
 app.use(logger('dev'));
 app.use(express.json());
@@ -32,13 +34,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(sassMiddleware({
   src: path.join(__dirname, 'sass'),
-  dest: path.join(__dirname, 'public/stylesheets'),
+  dest: path.join(__dirname, 'public/css'),
   indentedSyntax: false,
   sourceMap: false,
   outputStyle: "compressed",
   force: true,
-  prefix: '/stylesheets',
+  prefix: '/css',
 }));
+app.use('js', browserify(path.join(__dirname, 'public/js')));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
