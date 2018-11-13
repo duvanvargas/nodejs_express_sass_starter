@@ -1,23 +1,5 @@
 (function (doc) {
 
-    var hashCiudades = {};
-    hashCiudades['display'] = { nombre: 'Bogotá', numero: '3791587', indicativo: '031' };
-    hashCiudades['neiva'] = { nombre: 'Neiva', numero: '8631003', indicativo: '038' };
-    hashCiudades['ibague'] = { nombre: 'Ibagué', numero: '2770942', indicativo: '038' };
-    hashCiudades['pasto'] = { nombre: 'Pasto', numero: '7365036', indicativo: '032' };
-    hashCiudades['manizales-pereira'] = { nombre: 'Manizales y Pereira', numero: '8928260', indicativo: '036' };
-    hashCiudades['tunja'] = { nombre: 'Tunja', numero: '7474647', indicativo: '038' };
-    hashCiudades['sincelejo'] = { nombre: 'Sincelejo', numero: '2771056', indicativo: '035' };
-    hashCiudades['cucuta'] = { nombre: 'Cucuta', numero: '5955915', indicativo: '037' };
-    hashCiudades['yopal'] = { nombre: 'Yopal', numero: '6336353', indicativo: '038' };
-    hashCiudades['villavicencio'] = { nombre: 'Villavicencio', numero: '6740694', indicativo: '038' };
-    hashCiudades['rioacha'] = { nombre: 'Rioacha', numero: '7292639', indicativo: '035' };
-    hashCiudades['monteria'] = { nombre: 'Montería', numero: '7890689', indicativo: '034' };
-    hashCiudades['santa-martha'] = { nombre: 'Santa Martha', numero: '4368246', indicativo: '035' };
-    hashCiudades['bucaramanga'] = { nombre: 'Bucaramanga', numero: '6970337', indicativo: '037' };
-    hashCiudades['cartagena'] = { nombre: 'Cartagena', numero: '6930533', indicativo: '035' };
-    hashCiudades['Todocolombia'] = { nombre: 'Todo Colombia', numero: '3791581', indicativo: '031' };
-
 
     function checkValidity() {
         telefono = $('#telefonoLlamar').val();
